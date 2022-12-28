@@ -36,28 +36,28 @@ DefaultContentLanguageInSubdir = true
         url = "/en/blog/emoji-support/"
         weight = 4
 
-  [languages.de]
-    contentDir = "content/de" # Deutsch
+  [languages.id]
+    contentDir = "content/id" #indonesia
     weight = 2
-    languageName = "Deutsch"
-    title = "Blist (mehrsprachig)"
-    description = "Modernes Blog-Theme für Ihre Hugo-Site."
-    [languages.de.params]
-      introTitle = "Hallo, ich bin Katheryn Fox"
-      introSubtitle = "26-jährige Junior-Entwicklerin, die Spaß an sozialen Kartenspielen, Bloggen und Malen hat"
-      introPhoto = "/picture.jpg"
+    languageName = "Indonesia"
+    title = "Fathi Blog"
+    description = "Saya memposting "
+    [languages.id.params]
+      introTitle = "Hallo, Saya Fathi Naufal Hanif"
+      introSubtitle = "Aku membuat gim"
+      introPhoto = "/picture.png"
       logo = "/blist-logo-de.png"
-    [[languages.de.menu.main]]
+    [[languages.id.menu.main]]
         name = "Blog"
         url = "blog"
         weight = 1
 
-    [[languages.de.menu.main]]
+    [[languages.id.menu.main]]
         name = "Über mich"
         url = "page/about/"
         weight = 2
 
-    [[languages.de.menu.main]]
+    [[languages.id.menu.main]]
         name = "Tags"
         url = "tags"
         weight = 3
