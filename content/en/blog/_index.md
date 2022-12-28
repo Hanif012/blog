@@ -1,8 +1,5 @@
 ---
 author: Fathi Naufal Hanif
-title: Blog
+title: Fathi Blog
+date: 2022-12-28
 ---
-
-Testing testing trulala
-
-Hello, world!

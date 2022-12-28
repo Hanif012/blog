@@ -2,7 +2,9 @@ baseurl = "https://hanif012.github.io/"
 metaDataFormat = "yaml"
 title = "Fathi Blog"
 theme = "blist"
-ignoreErrors = ["error-remote-getjson"]
+
+#ignore error on/off
+#ignoreErrors = ["error-remote-getjson"]
 
 DefaultContentLanguage = "en"
 DefaultContentLanguageInSubdir = true
@@ -91,7 +93,7 @@ DefaultContentLanguageInSubdir = true
 
   # Custom copyright - optional
   copyright = "Copyright © 2022 - Fathi Naufal Hanif · All rights reserved"
-  favicon = "/favicon.svg"
+  favicon = "/favicon.ico"
 
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors
@@ -107,7 +109,7 @@ DefaultContentLanguageInSubdir = true
 
   # To hide "Other languages" option if the post is available in multiple languages
   # Can be used at site level or page level
-  hideOtherLanguages = false
+  hideOtherLanguages = true
 
   # Add support for Table of contents
   # Can be added to a page level also in markdown frontmatter
@@ -121,7 +123,7 @@ DefaultContentLanguageInSubdir = true
 [params.homepage.social]
   # Global params common for both languages
   title = "Follow me"
-  description = "I love reading, designing, and vibing"
+  description = "I love reading, designing, and vibing ;)"
 
   [[params.homepage.social.icons]]
     website = "twitter"
