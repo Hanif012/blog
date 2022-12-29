@@ -2,7 +2,7 @@
 author: Fathi Naufal Hanif
 title: "The Introduction and My Goal"
 date: 2022-12-28T17:27:50+07:00
-description: "the beginning"
+description: "The Beginning"
 tags: ["announcement"]
 thumbnail: https://i.pinimg.com/564x/ad/14/df/ad14df0db0346cb463765d9f16f442a1.jpg
 draft: false
