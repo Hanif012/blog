@@ -35,7 +35,7 @@ DefaultContentLanguageInSubdir = true
 
     [[languages.en.menu.main]]
         name = "Top Post"
-        url = "/en/blog/emoji-support/"
+        url = "/en/blog/introduction/"
         weight = 4
 
   [languages.id]
@@ -55,7 +55,7 @@ DefaultContentLanguageInSubdir = true
         weight = 1
 
     [[languages.id.menu.main]]
-        name = "Über mich"
+        name = "About"
         url = "page/about/"
         weight = 2
 
