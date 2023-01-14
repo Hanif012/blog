@@ -1,0 +1,126 @@
+<footer class="container p-6 mx-auto flex justify-between items-center">
+  <span class="text-sm font-light">
+    {{ if (isset .Site.Params "copyright") }}
+    {{ .Site.Params.copyright | safeHTML }}
+    {{ else }}
+    {{ dateFormat "2006" now }} © {{ .Site.Title }}
+    {{ end }}
+  </span>
+    <!-- Begin Mailchimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+	    #mc_embed_signup{background:rgb(17,24,39); clear:left; font:14px Helvetica,Arial,sans-serif;  width:300px;}
+	    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+    	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <div id="mc_embed_signup">
+        <form action="https://github.us21.list-manage.com/subscribe/post?u=e1b11008f57859ecaa2a8c447&amp;id=720832585a&amp;f_id=0055dee1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <h2>Subscribe</h2>
+           <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+    <div class="mc-field-group">
+    	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+    </label>
+    	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+    	<span id="mce-EMAIL-HELPERTEXT" class="helper_text">example@gmail.com</span>
+    </div>
+    <div class="mc-field-group">
+    	<label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+    </label>
+	    <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" required>
+	    <span id="mce-FNAME-HELPERTEXT" class="helper_text">What should i call you</span>
+    </div>
+    <div class="mc-field-group">
+	    <label for="mce-LNAME">Last Name </label>
+	    <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+	    <span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>
+    </div>
+    	<div id="mce-responses" class="clear foot">
+    		<div class="response" id="mce-error-response" style="display:none"></div>
+    		<div class="response" id="mce-success-response" style="display:none"></div>
+    	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e1b11008f57859ecaa2a8c447_720832585a" tabindex="-1" value=""></div>
+            <div class="optionalParent">
+               <div class="clear foot">
+                   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                    <p class="brandingLogo"><a href="http://eepurl.com/ihezVr" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    <!--End mc_embed_signup-->
+  <span onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="p-1 cursor-pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5"
+      stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M18 15l-6 -6l-6 6h12" />
+    </svg>
+  </span>
+</footer>
+
+{{ if .Site.Params.enableSearch }}
+{{- partial "search-ui.html" . -}}
+{{ end }}
+
+{{ template "_internal/google_analytics.html" . }}
+
+{{ if ge (len .Site.Languages) 3 }}
+<script>
+  const languageMenuButton = document.querySelector('.language-switcher');
+  const languageDropdown = document.querySelector('.language-dropdown');
+  languageMenuButton.addEventListener('click', (evt) => {
+    evt.preventDefault()
+    if (languageDropdown.classList.contains('hidden')) {
+      languageDropdown.classList.remove('hidden')
+      languageDropdown.classList.add('flex')
+    } else {
+      languageDropdown.classList.add('hidden');
+      languageDropdown.classList.remove('flex');
+    }
+  })
+</script>
+{{ end }}
+
+{{ if .Site.Params.darkModeToggle }}
+<script>
+  // On page load or when changing themes
+  const darkmode = document.querySelector('.toggle-dark-mode');
+  function toggleDarkMode() {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('darkmode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('darkmode', 'dark')
+    }
+  }
+  if (darkmode) {
+    darkmode.addEventListener('click', toggleDarkMode);
+  }
+
+  const darkStorage = localStorage.getItem('darkmode');
+  const isBrowserDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (!darkStorage && isBrowserDark) {
+    document.documentElement.classList.add('dark');
+  }
+
+  if (darkStorage && darkStorage === 'dark') {
+    toggleDarkMode();
+  }
+</script>
+{{ end }}
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button')
+  const mobileMenu = document.querySelector('.mobile-menu')
+  function toggleMenu() {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  }
+  if(mobileMenu && mobileMenuButton){
+    mobileMenuButton.addEventListener('click', toggleMenu)
+  }
+</script>
